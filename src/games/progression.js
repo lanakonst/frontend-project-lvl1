@@ -2,22 +2,22 @@ import * as gameLines from '../index.js';
 
 const randomInt = () => Math.floor(Math.random() * 200);
 const createProg = (len, dots) => {
-    const comDif = randomInt();
-    let n = randomInt();
-    const prog = [];
-    let ans;
+  const comDif = randomInt();
+  let n = randomInt();
+  const prog = [];
+  let ans;
 
   for (let j = 1; j <= len; j += 1) {
-  if (j === dots) {
-    prog.push('..');
-    ans = n;
+    if (j === dots) {
+      prog.push('..');
+      ans = n;
     } else {
-    prog.push(n);
+      prog.push(n);
     }
     n += comDif;
   }
   return [prog, ans];
-}
+};
 
 export default () => {
   const name = gameLines.greeting();
@@ -27,8 +27,6 @@ export default () => {
   let i = 0;
 
   while (i < 3) {
-    const comDif = randomInt();
-    let n = randomInt();
     const len = Math.floor(Math.random() * (maxLen - minLen + 1) + minLen);
     const dots = Math.floor(Math.random() * len + 1);
 

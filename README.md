@@ -6,3 +6,5 @@
 [![linter](https://github.com/lanakonst/frontend-project-lvl1/actions/workflows/linter.yml/badge.svg)](https://github.com/lanakonst/frontend-project-lvl1/actions/workflows/linter.yml)
 
 https://asciinema.org/a/NB3WRVYQxWJCzOIvuu5qiOYtl
+
+https://asciinema.org/a/z0N6Qu9QOLEcGjWQa5TM59uAh

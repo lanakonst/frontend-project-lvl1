@@ -8,8 +8,9 @@ export default () => {
   console.log('What is the result of the expression?');
 
   let i = 0;
+  let j = 0;
 
-  while (i < 3) {
+  while (i < 3 && j < 3) {
     const a = randomInt();
     const b = randomInt();
     const nSgn = signNum();
@@ -28,8 +29,9 @@ export default () => {
         console.log(`Question: ${a} * ${b}`);
         break;
     }
-
     i = gameLines.check(ans, name, i);
+    if (i === 0) j += 1;
   }
-  console.log(`Congratulations, ${name}!`);
+
+  if (j < 3) console.log(`Congratulations, ${name}!`);
 };

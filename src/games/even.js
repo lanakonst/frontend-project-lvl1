@@ -19,6 +19,6 @@ export default () => {
     i = gameLines.check(ans, name, i, j);
     if (i === 0) j += 1;
   }
-  
+
   if (j < 3) console.log(`Congratulations, ${name}!`);
 };

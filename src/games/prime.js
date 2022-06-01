@@ -17,7 +17,7 @@ const isPrime = (n) => {
 
 export default () => {
   const name = gameLines.greeting();
-  console.log('Answer "yes" if the number is prime, otherwise answer "no".');
+  console.log('Answer \'yes\' if the number is prime, otherwise answer \'no\'.');
   let i = 0;
 
   while (i < 3) {

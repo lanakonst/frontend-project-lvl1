@@ -15,6 +15,7 @@ const div = (a, b) => {
 
 export default () => {
   const name = gameLines.greeting();
+  console.log('Find the greatest common divisor of given numbers.');
   let i = 0;
 
   while (i < 3) {

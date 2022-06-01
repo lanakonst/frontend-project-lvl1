@@ -7,7 +7,7 @@ export const greeting = () => {
   return name;
 };
 
-export const check = (ans, name, i, j) => {
+export const check = (ans, name, i) => {
   const userAns = readlineSync.question('Your answer: ');
   if (String(ans) === userAns) {
     console.log('Correct!');
@@ -15,6 +15,6 @@ export const check = (ans, name, i, j) => {
   }
   console.log(`'${userAns}' is wrong answer ;(. Correct answer was '${ans}'.`);
 
-  if (j < 2) console.log(`Let's try again, ${name}!`);
+  console.log(`Let's try again, ${name}!`);
   return 0;
 };

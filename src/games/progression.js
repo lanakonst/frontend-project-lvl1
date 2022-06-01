@@ -25,17 +25,15 @@ export default () => {
   const minLen = 5;
   console.log('What number is missing in the progression?');
   let i = 0;
-  let j = 0;
 
-  while (i < 3 && j < 3) {
+  while (i < 3) {
     const len = Math.floor(Math.random() * (maxLen - minLen + 1) + minLen);
     const dots = Math.floor(Math.random() * len + 1);
 
     const [prog, ans] = createProg(len, dots);
 
     console.log(`Question: ${prog.join(' ')}`);
-    i = gameLines.check(ans, name, i, j);
-    if (i === 0) j += 1;
+    i = gameLines.check(ans, name, i);
   }
-  if (j < 3) console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };

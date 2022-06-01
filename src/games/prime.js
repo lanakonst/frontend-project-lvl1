@@ -19,12 +19,14 @@ export default () => {
   const name = gameLines.greeting();
   console.log('Answer \'yes\' if the number is prime, otherwise answer \'no\'.');
   let i = 0;
+  let j = 0;
 
-  while (i < 3) {
+  while (i < 3 && j < 3) {
     const n = randomInt();
     console.log(`Question: ${n}`);
     const ans = isPrime(n);
-    i = gameLines.check(ans, name, i);
+    i = gameLines.check(ans, name, i, j);
+    if (i === 0) j += 1;
   }
-  console.log(`Congratulations, ${name}!`);
+  if (j < 3) console.log(`Congratulations, ${name}!`);
 };

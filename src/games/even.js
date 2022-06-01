@@ -16,7 +16,7 @@ export default () => {
       ans = 'yes';
     }
 
-    i = gameLines.check(ans, name, i);
+    i = gameLines.check(ans, name, i, j);
     if (i === 0) j += 1;
   }
   

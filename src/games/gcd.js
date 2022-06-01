@@ -17,15 +17,17 @@ export default () => {
   const name = gameLines.greeting();
   console.log('Find the greatest common divisor of given numbers.');
   let i = 0;
+  let j = 0;
 
-  while (i < 3) {
+  while (i < 3 && j < 3) {
     const a = randomInt();
     const b = randomInt();
     console.log(`Question: ${a} ${b}`);
     const ans = div(a, b);
 
-    i = gameLines.check(ans, name, i);
+    i = gameLines.check(ans, name, i, j);
+    if (i === 0) j += 1;
   }
 
-  console.log(`Congratulations, ${name}!`);
+  if (j < 3) console.log(`Congratulations, ${name}!`);
 };

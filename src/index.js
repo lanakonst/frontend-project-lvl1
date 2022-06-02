@@ -16,5 +16,5 @@ export const check = (ans, name, i) => {
   console.log(`'${userAns}' is wrong answer ;(. Correct answer was '${ans}'.`);
 
   console.log(`Let's try again, ${name}!`);
-  return 3;
+  return 4;
 };

@@ -35,5 +35,6 @@ export default () => {
     console.log(`Question: ${prog.join(' ')}`);
     i = gameLines.check(ans, name, i);
   }
-  console.log(`Congratulations, ${name}!`);
+
+  if (i === 3) console.log(`Congratulations, ${name}!`);
 };

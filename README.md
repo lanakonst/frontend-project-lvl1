@@ -5,7 +5,8 @@
 
 [![linter](https://github.com/lanakonst/frontend-project-lvl1/actions/workflows/linter.yml/badge.svg)](https://github.com/lanakonst/frontend-project-lvl1/actions/workflows/linter.yml)
 
-Four games. User has to answer correctly three times in a row. 
+Five games. User has to answer correctly three times in a row. 
+
 brain-even: 
 Is a number even?
 [https://asciinema.org/a/OGXsJcAzp9L7LuHEJ7opu5oiE](https://asciinema.org/a/OGXsJcAzp9L7LuHEJ7opu5oiE)

@@ -4,7 +4,7 @@ const randomInt = () => Math.floor(Math.random() * 1000);
 
 export default () => {
   const name = gameLines.greeting();
-  console.log('Answer \'yes\' if the number is even, otherwise answer \'no\'.');
+  console.log('Answer \'yes\' if the number is even otherwise answer \'no\'.');
   let i = 0;
 
   while (i < 3) {

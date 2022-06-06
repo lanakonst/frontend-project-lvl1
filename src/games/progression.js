@@ -28,9 +28,10 @@ export default () => {
 
   while (i < 3) {
     const len = randomInt(maxLen, minLen);
-    const dots = randomInt(len, 0);
+    const dots = randomInt(len - 1, 1);
 
     const [prog, ans] = createProg(len, dots);
+    console.log(len, dots);
 
     console.log(`Question: ${prog.join(' ')}`);
     i = gameLines.check(ans, name, i);

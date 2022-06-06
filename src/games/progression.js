@@ -19,23 +19,16 @@ const createProg = (len, dots) => {
   return [prog, ans];
 };
 
-export default () => {
-  const name = gameLines.greeting();
+const getQnAns = () => {
   const maxLen = 10;
   const minLen = 5;
-  console.log('What number is missing in the progression?');
-  let i = 0;
+  const len = randomInt(maxLen, minLen);
+  const dots = randomInt(len - 1, 1);
+  const [prog, ans] = createProg(len, dots);
+  const quest = prog.join(' ');
+  return [quest, ans];
+};
 
-  while (i < 3) {
-    const len = randomInt(maxLen, minLen);
-    const dots = randomInt(len - 1, 1);
-
-    const [prog, ans] = createProg(len, dots);
-    console.log(len, dots);
-
-    console.log(`Question: ${prog.join(' ')}`);
-    i = gameLines.check(ans, name, i);
-  }
-
-  if (i === 3) console.log(`Congratulations, ${name}!`);
+export default () => {
+  gameLines.round(getQnAns, 'What number is missing in the progression?');
 };

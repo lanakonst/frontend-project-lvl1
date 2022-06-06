@@ -15,16 +15,12 @@ const isPrime = (n) => {
   return 'yes';
 };
 
-export default () => {
-  const name = gameLines.greeting();
-  console.log('Answer \'yes\' if the number is prime, otherwise answer \'no\'.');
-  let i = 0;
+const getQnAns = () => {
+  const quest = randomInt(100, 0);
+  const ans = isPrime(quest);
+  return [quest, ans];
+};
 
-  while (i < 3) {
-    const n = randomInt(100, 0);
-    console.log(`Question: ${n}`);
-    const ans = isPrime(n);
-    i = gameLines.check(ans, name, i);
-  }
-  if (i === 3) console.log(`Congratulations, ${name}!`);
+export default () => {
+  gameLines.round(getQnAns, 'Answer \'yes\' if the number is prime, otherwise answer \'no\'.');
 };

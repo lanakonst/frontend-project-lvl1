@@ -12,19 +12,14 @@ const div = (a, b) => {
   return ans;
 };
 
+const getQnAns = () => {
+  const a = randomInt(100, 0);
+  const b = randomInt(100, 0);
+  const ans = div(a, b);
+
+  return [`${a} ${b}`, ans];
+};
+
 export default () => {
-  const name = gameLines.greeting();
-  console.log('Find the greatest common divisor of given numbers.');
-  let i = 0;
-
-  while (i < 3) {
-    const a = randomInt(100, 0);
-    const b = randomInt(100, 0);
-    console.log(`Question: ${a} ${b}`);
-    const ans = div(a, b);
-
-    i = gameLines.check(ans, name, i);
-  }
-
-  if (i === 3) console.log(`Congratulations, ${name}!`);
+  gameLines.round(getQnAns, 'Find the greatest common divisor of given numbers.');
 };

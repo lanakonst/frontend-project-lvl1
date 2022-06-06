@@ -1,6 +1,5 @@
 import * as gameLines from '../index.js';
-
-const randomInt = () => Math.floor(Math.random() * 100);
+import randomInt from '../utils.js';
 
 const div = (a, b) => {
   let ans = 1;
@@ -19,8 +18,8 @@ export default () => {
   let i = 0;
 
   while (i < 3) {
-    const a = randomInt();
-    const b = randomInt();
+    const a = randomInt(100, 0);
+    const b = randomInt(100, 0);
     console.log(`Question: ${a} ${b}`);
     const ans = div(a, b);
 

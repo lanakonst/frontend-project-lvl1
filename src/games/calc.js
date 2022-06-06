@@ -1,7 +1,5 @@
 import * as gameLines from '../index.js';
-
-const randomInt = () => Math.floor(Math.random() * 200);
-const signNum = () => Math.floor(Math.random() * 3 + 1);
+import randomInt from '../utils.js';
 
 export default () => {
   const name = gameLines.greeting();
@@ -11,8 +9,8 @@ export default () => {
 
   while (i < 3) {
     const a = randomInt();
-    const b = randomInt();
-    const nSgn = signNum();
+    const b = randomInt(100, 0);
+    const nSgn = randomInt(3, 1);
     let ans;
     switch (nSgn) {
       case 1:

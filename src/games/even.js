@@ -1,6 +1,5 @@
 import * as gameLines from '../index.js';
-
-const randomInt = () => Math.floor(Math.random() * 1000);
+import randomInt from '../utils.js';
 
 export default () => {
   const name = gameLines.greeting();

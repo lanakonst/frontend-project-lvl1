@@ -1,6 +1,6 @@
 import * as gameLines from '../index.js';
+import randomInt from '../utils.js';
 
-const randomInt = () => Math.floor(Math.random() * 1000);
 const isPrime = (n) => {
   if (n < 2) {
     return 'no';
@@ -21,7 +21,7 @@ export default () => {
   let i = 0;
 
   while (i < 3) {
-    const n = randomInt();
+    const n = randomInt(100, 0);
     console.log(`Question: ${n}`);
     const ans = isPrime(n);
     i = gameLines.check(ans, name, i);

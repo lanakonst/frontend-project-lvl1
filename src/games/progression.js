@@ -1,6 +1,6 @@
 import * as gameLines from '../index.js';
+import randomInt from '../utils.js';
 
-const randomInt = () => Math.floor(Math.random() * 200);
 const createProg = (len, dots) => {
   const comDif = randomInt();
   let n = randomInt();
@@ -27,8 +27,8 @@ export default () => {
   let i = 0;
 
   while (i < 3) {
-    const len = Math.floor(Math.random() * (maxLen - minLen + 1) + minLen);
-    const dots = Math.floor(Math.random() * len + 1);
+    const len = randomInt(maxLen, minLen);
+    const dots = randomInt(len, 0);
 
     const [prog, ans] = createProg(len, dots);
 

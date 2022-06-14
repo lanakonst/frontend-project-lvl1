@@ -1,26 +1,25 @@
 import * as gameLines from '../index.js';
 import randomInt from '../utils.js';
 
-const getQnAns = () => {
-  const a = randomInt();
-  const b = randomInt();
-  const nSgn = randomInt(1, 3);
-  let ans;
-  let quest;
-  switch (nSgn) {
-    case 1:
-      ans = a + b;
-      quest = `${a} + ${b}`;
-      break;
-    case 2:
-      ans = a - b;
-      quest = `${a} - ${b}`;
-      break;
+const calc = (num1, num2, sign) => {
+  switch (sign) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
     default:
-      ans = a * b;
-      quest = `${a} * ${b}`;
-      break;
+      return num1 * num2;
   }
+}
+
+const getQnAns = () => {
+  const num1 = randomInt();
+  const num2 = randomInt();
+  const signs = ['+', '-', '*'];
+  const signNum = randomInt(0, 2);
+  let ans = calc(num1, num2, signs[signNum]);
+  let quest = `${num1} ${signs[signNum]} ${num2}`;
+  
   return [quest, ans];
 };
 

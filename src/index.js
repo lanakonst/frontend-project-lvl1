@@ -6,8 +6,7 @@ export default (game, task) => {
   console.log(`Hello, ${name}!`);
   console.log(task);
 
-  let i = 0;
-  while (i < 3) {
+  for (let i = 0; i < 3; i += 1) {
     const [quest, ans] = game();
     console.log(`Question: ${quest}`);
     const userAns = readlineSync.question('Your answer: ');
@@ -16,7 +15,6 @@ export default (game, task) => {
       console.log(`Let's try again, ${name}!`);
       return;
     }
-    i += 1;
   }
-  if (i === 3) console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };

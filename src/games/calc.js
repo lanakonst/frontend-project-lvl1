@@ -3,8 +3,8 @@ import randomInt from '../utils.js';
 
 const getQnAns = () => {
   const a = randomInt();
-  const b = randomInt(100, 0);
-  const nSgn = randomInt(3, 1);
+  const b = randomInt();
+  const nSgn = randomInt(1, 3);
   let ans;
   let quest;
   switch (nSgn) {

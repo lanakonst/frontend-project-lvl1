@@ -13,8 +13,8 @@ const div = (a, b) => {
 };
 
 const getQnAns = () => {
-  const a = randomInt(100, 1);
-  const b = randomInt(100, 1);
+  const a = randomInt(1);
+  const b = randomInt(1);
   const ans = div(a, b);
 
   return [`${a} ${b}`, ans];

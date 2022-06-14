@@ -22,8 +22,8 @@ const createProg = (len, dots) => {
 const getQnAns = () => {
   const maxLen = 10;
   const minLen = 5;
-  const len = randomInt(maxLen, minLen);
-  const dots = randomInt(len - 1, 1);
+  const len = randomInt(minLen, maxLen);
+  const dots = randomInt(1, len - 1);
   const [prog, ans] = createProg(len, dots);
   const quest = prog.join(' ');
   return [quest, ans];

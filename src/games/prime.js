@@ -16,7 +16,7 @@ const isPrime = (n) => {
 };
 
 const getQnAns = () => {
-  const quest = randomInt(100, 0);
+  const quest = randomInt();
   const ans = isPrime(quest);
   return [quest, ans];
 };

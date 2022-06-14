@@ -3,21 +3,21 @@ import randomInt from '../utils.js';
 
 const isPrime = (n) => {
   if (n < 2) {
-    return 'no';
+    return false;
   }
 
   for (let i = 2; i <= n / 2; i += 1) {
     if (n % i === 0) {
-      return 'no';
+      return false;
     }
   }
 
-  return 'yes';
+  return true;
 };
 
 const getQnAns = () => {
   const quest = randomInt();
-  const ans = isPrime(quest);
+  const ans = isPrime(quest) ? 'yes' : 'no';
   return [quest, ans];
 };
 

@@ -10,16 +10,16 @@ const calc = (num1, num2, sign) => {
     default:
       return num1 * num2;
   }
-}
+};
 
 const getQnAns = () => {
   const num1 = randomInt();
   const num2 = randomInt();
   const signs = ['+', '-', '*'];
   const signNum = randomInt(0, 2);
-  let ans = calc(num1, num2, signs[signNum]);
-  let quest = `${num1} ${signs[signNum]} ${num2}`;
-  
+  const ans = calc(num1, num2, signs[signNum]);
+  const quest = `${num1} ${signs[signNum]} ${num2}`;
+
   return [quest, ans];
 };
 

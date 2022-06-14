@@ -1,11 +1,11 @@
 import * as gameLines from '../index.js';
 import randomInt from '../utils.js';
 
-const isEven = n => n % 2 === 0;
+const isEven = (n) => n % 2 === 0;
 
 const getQnAns = () => {
   const n = randomInt();
-  let ans = isEven(n) ? 'yes' : 'no';
+  const ans = isEven(n) ? 'yes' : 'no';
   return [n, ans];
 };
 

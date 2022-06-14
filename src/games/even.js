@@ -1,4 +1,4 @@
-import * as gameLines from '../index.js';
+import gameLines from '../index.js';
 import randomInt from '../utils.js';
 
 const isEven = (n) => n % 2 === 0;
@@ -10,5 +10,5 @@ const getQnAns = () => {
 };
 
 export default () => {
-  gameLines.round(getQnAns, 'Answer \'yes\' if the number is even, otherwise answer \'no\'.');
+  gameLines(getQnAns, 'Answer \'yes\' if the number is even, otherwise answer \'no\'.');
 };

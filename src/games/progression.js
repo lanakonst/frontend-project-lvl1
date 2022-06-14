@@ -1,4 +1,4 @@
-import * as gameLines from '../index.js';
+import gameLines from '../index.js';
 import randomInt from '../utils.js';
 
 const createProg = (len, dots) => {
@@ -26,9 +26,9 @@ const getQnAns = () => {
   const dots = randomInt(1, len - 1);
   const [prog, ans] = createProg(len, dots);
   const quest = prog.join(' ');
-  return [quest, ans];
+  return [quest, String(ans)];
 };
 
 export default () => {
-  gameLines.round(getQnAns, 'What number is missing in the progression?');
+  gameLines(getQnAns, 'What number is missing in the progression?');
 };

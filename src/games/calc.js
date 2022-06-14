@@ -1,4 +1,4 @@
-import * as gameLines from '../index.js';
+import gameLines from '../index.js';
 import randomInt from '../utils.js';
 
 const calc = (num1, num2, sign) => {
@@ -20,9 +20,9 @@ const getQnAns = () => {
   const ans = calc(num1, num2, signs[signNum]);
   const quest = `${num1} ${signs[signNum]} ${num2}`;
 
-  return [quest, ans];
+  return [quest, String(ans)];
 };
 
 export default () => {
-  gameLines.round(getQnAns, 'What is the result of the expression?');
+  gameLines(getQnAns, 'What is the result of the expression?');
 };

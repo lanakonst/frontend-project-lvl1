@@ -1,4 +1,4 @@
-import * as gameLines from '../index.js';
+import gameLines from '../index.js';
 import randomInt from '../utils.js';
 
 const div = (a, b) => {
@@ -17,9 +17,9 @@ const getQnAns = () => {
   const b = randomInt(1);
   const ans = div(a, b);
 
-  return [`${a} ${b}`, ans];
+  return [`${a} ${b}`, String(ans)];
 };
 
 export default () => {
-  gameLines.round(getQnAns, 'Find the greatest common divisor of given numbers.');
+  gameLines(getQnAns, 'Find the greatest common divisor of given numbers.');
 };

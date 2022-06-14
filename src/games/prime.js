@@ -1,4 +1,4 @@
-import * as gameLines from '../index.js';
+import gameLines from '../index.js';
 import randomInt from '../utils.js';
 
 const isPrime = (n) => {
@@ -22,5 +22,5 @@ const getQnAns = () => {
 };
 
 export default () => {
-  gameLines.round(getQnAns, 'Answer \'yes\' if the number is prime, otherwise answer \'no\'.');
+  gameLines(getQnAns, 'Answer \'yes\' if the number is prime, otherwise answer \'no\'.');
 };

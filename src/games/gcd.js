@@ -1,11 +1,11 @@
 import gameLines from '../index.js';
 import randomInt from '../utils.js';
 
-const div = (a, b) => {
+const div = (num1, num2) => {
   let ans = 1;
   let n = 1;
-  while (n < a && n < b) {
-    if (a % (n + 1) === 0 && b % (n + 1) === 0) ans = n + 1;
+  while (n < num1 && n < num2) {
+    if (num1 % (n + 1) === 0 && num2 % (n + 1) === 0) ans = n + 1;
     n += 1;
   }
 
@@ -13,11 +13,11 @@ const div = (a, b) => {
 };
 
 const getQnAns = () => {
-  const a = randomInt(1);
-  const b = randomInt(1);
-  const ans = div(a, b);
+  const num1 = randomInt(1);
+  const num2 = randomInt(1);
+  const ans = div(num1, num2);
 
-  return [`${a} ${b}`, String(ans)];
+  return [`${num1} ${num2}`, String(ans)];
 };
 
 export default () => {

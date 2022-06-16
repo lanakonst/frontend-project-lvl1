@@ -1,9 +1,9 @@
 import gameLines from '../index.js';
 import randomInt from '../utils.js';
 
-const createProg = (len, comDif, firstN) => {
+const createProgression = (len, comDif, firstTerm) => {
   const prog = [];
-  let n = firstN;
+  let n = firstTerm;
   for (let i = 1; i <= len; i += 1) {
     prog.push(n);
     n += comDif;
@@ -15,12 +15,12 @@ const getQnAns = () => {
   const maxLen = 10;
   const minLen = 5;
   const len = randomInt(minLen, maxLen);
-  const comDif = randomInt();
-  const firstN = randomInt();
-  const prog = createProg(len, comDif, firstN);
-  const dots = randomInt(0, len - 1);
-  const ans = prog[dots];
-  prog[dots] = '..';
+  const commonDiff = randomInt();
+  const firstTerm = randomInt();
+  const prog = createProgression(len, commonDiff, firstTerm);
+  const missingTerm = randomInt(0, len - 1);
+  const ans = prog[missingTerm];
+  prog[missingTerm] = '..';
   const quest = prog.join(' ');
   return [quest, String(ans)];
 };

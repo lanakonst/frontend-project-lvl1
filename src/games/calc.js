@@ -16,7 +16,7 @@ const getQnAns = () => {
   const num1 = randomInt();
   const num2 = randomInt();
   const signs = ['+', '-', '*'];
-  const signNum = randomInt(0, 2);
+  const signNum = randomInt(0, signs.length - 1);
   const ans = calc(num1, num2, signs[signNum]);
   const quest = `${num1} ${signs[signNum]} ${num2}`;
 

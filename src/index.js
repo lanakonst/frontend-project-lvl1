@@ -5,8 +5,9 @@ export default (game, task) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(task);
+  const roundsCount = 3;
 
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const [quest, ans] = game();
     console.log(`Question: ${quest}`);
     const userAns = readlineSync.question('Your answer: ');
